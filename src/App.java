@@ -1,3 +1,5 @@
+import Ejercicios.contorllers.Laberinto;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,7 +30,7 @@ public class App {
         System.out.println("Time taken: " + (endtime - startime)/1_000_000_000.00 + " s");
 
         /// Ejericio 1
-        // runEjercicio();
+        runEjercicio();
 
     }
 
@@ -74,13 +76,25 @@ public class App {
     }
 
     public static void runEjercicio() {
+        Laberinto laberinto = new Laberinto();
+        boolean[][] grid = {
+        { true, true, true, true },
+        { false, false, false, true },
+        { true, true, false, true },
+        { true, true, false, true }
+        };
+        System.out.println(Arrays.deepToString(grid));
+        System.out.println("Output:" + laberinto.getPath(grid));
+        
 
-        // boolean[][] grid = {
-        // { true, true, true, true },
-        // { false, false, false, true },
-        // { true, true, false, true },
-        // { true, true, false, true }
-        // };
+        boolean [][] grid1 = {
+            {true,true,true,true},
+            {false,true,true,true},
+            {true,true,false,false},
+            {true,true,true,true},
+        };
+        System.out.println(Arrays.deepToString(grid1));
+        System.out.println("Output: "+laberinto.getPath(grid1));
 
     }
 }
