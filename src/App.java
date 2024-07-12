@@ -83,6 +83,7 @@ public class App {
         { true, true, false, true },
         { true, true, false, true }
         };
+        System.out.println("Ejercicio: ");
         System.out.println(Arrays.deepToString(grid));
         System.out.println("Output:" + laberinto.getPath(grid));
         
